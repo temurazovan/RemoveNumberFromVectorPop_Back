@@ -26,7 +26,10 @@ int main() {
         }
     }
 
+    vector.pop_back();
 
-
+    for (int i = 0; i < vector.size(); i++){
+        std::cout << vector[i] << " ";
+    }
 
 }

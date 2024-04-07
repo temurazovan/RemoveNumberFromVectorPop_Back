@@ -17,6 +17,16 @@ int main() {
         vector[i] = numbers;
     }
 
+    std::cout << "Input number to delete: ";
+    std::cin >> numberToDelete;
+
+    for (int i = 0; i < size; i++) {
+        if (vector[i] == numberToDelete) {
+            std::swap(vector[i], vector.back());
+        }
+    }
+
+
 
 
 }

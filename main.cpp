@@ -20,13 +20,17 @@ int main() {
     std::cout << "Input number to delete: ";
     std::cin >> numberToDelete;
 
-for (int i = 0; i < size - 1; i++) {
-    for (int j = 0; j < size - 1 - i; j++){
-        if (vector[j] == numberToDelete ){
-            std::swap(vector[j], vector[j+1]);
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - 1 - i; j++) {
+            if (vector[j] == numberToDelete) {
+                std::swap(vector[j], vector[j + 1]);
+            }
         }
     }
-}
+
+    while (vector.back() == numberToDelete) {
+        vector.pop_back();
+    }
 
     for (int i = 0; i < vector.size(); i++) {
         std::cout << vector[i] << " ";
